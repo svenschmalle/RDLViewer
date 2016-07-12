@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<BerichtsDaten>
+  <KopfDaten>
+    <Name>Rechnung</Name>
+	<Bank>Bremer MusterBank eG</Bank>
+	<BLZ>BLZ:90063548</BLZ>
+	<KTO>Kto.Nr.: 274562 </KTO>
+    <FIRMA>Musterpraxis Aua GmbH</FIRMA>
+    <STRASSE>Musterstraße 5</STRASSE>
+	<PLZOrt>2048 Bitstadt</PLZOrt>
+	<RGAdresse>Maximilia Musterpatient
+Musterweg 32
+1024 Bithausen</RGAdresse>
+  </KopfDaten>
+  <Posten>
+    <art_nr>4711</art_nr>
+    <bezeichnung>Untersuchung</bezeichnung>
+    <betrag_netto>100,00</betrag_netto>
+    <betrag_brutto>119,00</betrag_brutto>
+  </Posten>
+  <Posten>
+    <art_nr>4800</art_nr>
+    <bezeichnung>Behandlung</bezeichnung>
+    <betrag_netto>1000,00</betrag_netto>
+    <betrag_brutto>1190,00</betrag_brutto>
+  </Posten>
+  <Posten>
+    <art_nr>4913</art_nr>
+    <bezeichnung>Medikamentoese Medikamente</bezeichnung>
+    <betrag_netto>50,00</betrag_netto>
+    <betrag_brutto>53,00</betrag_brutto>
+  </Posten>
+  <Posten>
+    <art_nr>5199</art_nr>
+    <bezeichnung>Krankheit feststellen</bezeichnung>
+    <betrag_netto>99,00</betrag_netto>
+    <betrag_brutto>110,00</betrag_brutto>
+  </Posten>
+  <Posten>
+    <art_nr>5600</art_nr>
+    <bezeichnung>Krankenschein ausfuellen</bezeichnung>
+    <betrag_netto>10,00</betrag_netto>
+    <betrag_brutto>11,90</betrag_brutto>
+  </Posten>
+</BerichtsDaten>
