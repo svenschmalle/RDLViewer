@@ -32,10 +32,13 @@ namespace RDLViewer
                 this.WindowState = FormWindowState.Normal;
                 DataSet ds = new DataSet();
                 ds.ReadXml(_args[0]);
-                ReportDataSource rds = new ReportDataSource("Kopfdaten", ds.Tables["Kopfdaten"]);
-                ReportDataSource rdsPosten = new ReportDataSource("Posten", ds.Tables["Posten"]);
-                this.reportViewer1.LocalReport.DataSources.Add(rds);
-                this.reportViewer1.LocalReport.DataSources.Add(rdsPosten);
+
+                foreach (DataTable dt in ds.Tables)
+                {
+                    ReportDataSource rds = new ReportDataSource(dt.TableName, dt);
+                    this.reportViewer1.LocalReport.DataSources.Add(rds);
+                }
+
                 this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
                 this.reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Reports", Path.GetFileNameWithoutExtension(_args[0]) + ".rdl");
                 this.reportViewer1.RefreshReport();

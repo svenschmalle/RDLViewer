@@ -1,6 +1,6 @@
 <?xml version="1.0" standalone="yes"?>
 <BerichtsDaten>
-  <KopfDaten>
+  <Kopfdaten>
     <Name>Rechnung</Name>
 	<Bank>Bremer MusterBank eG</Bank>
 	<BLZ>BLZ:90063548</BLZ>
@@ -11,7 +11,7 @@
 	<RGAdresse>Maximilia Musterpatient
 Musterweg 32
 1024 Bithausen</RGAdresse>
-  </KopfDaten>
+  </Kopfdaten>
   <Posten>
     <art_nr>4711</art_nr>
     <bezeichnung>Untersuchung</bezeichnung>
