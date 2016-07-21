@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -14,6 +15,8 @@ namespace RDLViewer
 	public partial class Form1 : Form
 	{
         private string[] _args;
+        private DataSet _ReportDataSet;
+
         public Form1(string[] args)
 		{
             InitializeComponent();
@@ -30,10 +33,10 @@ namespace RDLViewer
             else
             {
                 this.WindowState = FormWindowState.Normal;
-                DataSet ds = new DataSet();
-                ds.ReadXml(_args[0]);
+                _ReportDataSet = new DataSet();
+                _ReportDataSet.ReadXml(_args[0]);
 
-                foreach (DataTable dt in ds.Tables)
+                foreach (DataTable dt in _ReportDataSet.Tables)
                 {
                     ReportDataSource rds = new ReportDataSource(dt.TableName, dt);
                     this.reportViewer1.LocalReport.DataSources.Add(rds);
@@ -45,9 +48,29 @@ namespace RDLViewer
             }
         }
 
-        private void reportViewer1_Load(object sender, EventArgs e)
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
+            if (e.Control && e.KeyCode == Keys.F4)
+            {
+                string tmpfile = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FBRDLViewer.tmp");
+                string output = "";
 
+                foreach (DataTable dt in _ReportDataSet.Tables)
+                {
+                    output += "DataTable \"" + dt.TableName + "\"" + Environment.NewLine;
+                    dt.WriteXml(tmpfile);
+                    output += File.ReadAllText(tmpfile);
+                    output = output.Replace("<?xml version=\"1.0\" standalone=\"yes\"?>", "------------------------------------------------------");
+                    output = output.Replace("<" + _ReportDataSet.DataSetName + ">", "<Query>" + Environment.NewLine + "<XmlData>" + Environment.NewLine + "<Root>");
+                    output = output.Replace("</" + _ReportDataSet.DataSetName + ">", "</Root>" + Environment.NewLine + "</XmlData>" + Environment.NewLine + "</Query>");
+                    output += Environment.NewLine;
+                    output += "------------------------------------------------------" + Environment.NewLine;
+                    output += Environment.NewLine + Environment.NewLine;
+                }
+                
+                FormXMLAusgabe frm_xmlausgabe = new FormXMLAusgabe(output);
+                frm_xmlausgabe.Show();
+            }
         }
     }
 }
