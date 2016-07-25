@@ -19,24 +19,36 @@
 &lt;XmlData&gt;
 &lt;Root&gt;
 &lt;Daten&gt;
-  &lt;TabellenName&gt;Tabelle1&lt;/TabellenName&gt;
+  &lt;Tabellenname&gt;Tabelle1&lt;/Tabellenname&gt;
   &lt;XMLDefinition&gt;Berichsdefinition der ersten Tabelle&lt;/XMLDefinition&gt;
+  &lt;ReportPfad&gt;c:\temp\Reports&lt;/ReportPfad&gt;
+  &lt;ReportDatei&gt;leer.rdl&lt;/ReportDatei&gt;
 &lt;/Daten&gt;
 &lt;Daten&gt;
-  &lt;TabellenName&gt;Tabelle2&lt;/TabellenName&gt;
+  &lt;Tabellenname&gt;Tabelle2&lt;/Tabellenname&gt;
   &lt;XMLDefinition&gt;Berichsdefinition der zweiten Tabelle&lt;/XMLDefinition&gt;
+  &lt;ReportPfad&gt;c:\temp\Reports&lt;/ReportPfad&gt;
+  &lt;ReportDatei&gt;leer.rdl&lt;/ReportDatei&gt;
 &lt;/Daten&gt;
 &lt;/Root&gt;
 &lt;/XmlData&gt;
 &lt;/Query&gt;</CommandText>
       </Query>
       <Fields>
-        <Field Name="TabellenName">
-          <DataField>TabellenName</DataField>
+        <Field Name="Tabellenname">
+          <DataField>Tabellenname</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="XMLDefinition">
           <DataField>XMLDefinition</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportPfad">
+          <DataField>ReportPfad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ReportDatei">
+          <DataField>ReportDatei</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -50,10 +62,229 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>173.82811mm</Width>
+                  <Width>175.68019mm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
+                <TablixRow>
+                  <Height>6mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox12">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>RDLViewer  - Neuer Bericht</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>11pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>White</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox12</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>#949ca4</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>41.18958mm</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox10">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Der RDL-Viewer wurde mit einer Datenquelle geöffnet, für welche kein Bericht gefunden wurde.</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Bitte erstelle einen Bericht mit dem SQL-Server Report Builder 3 (für SQL-Server 2014) und lege ihn in das Unterverzeichnis für die Berichte ab um diesen mit dem RDLViewer verwenden zu können.</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>URL zum SQL-Server Report Builder 3: </Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>https://www.microsoft.com/de-de/download/details.aspx?id=42301</Value>
+                                  <ActionInfo>
+                                    <Actions>
+                                      <Action>
+                                        <Hyperlink>https://www.microsoft.com/de-de/download/details.aspx?id=42301</Hyperlink>
+                                      </Action>
+                                    </Actions>
+                                  </ActionInfo>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Blue</Color>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Verzeichnis für RDLViewer Reports: </Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>ReportPfad</Label>
+                                  <Value>=First(Fields!ReportPfad.Value, "Berichtsdaten")</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Name des Reports: </Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Label>ReportDatei</Label>
+                                  <Value>=First(Fields!ReportDatei.Value, "Berichtsdaten")</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Für das einrichten der Report-Datasets wird nachfolgend die XML-Definition angezeigt, welche durch anklicken in die Zwischenablage kopiert werden und anschließend im SQL-Server Report Builder als XML-Dataset eingefügt werden kann.
+Die XML-Definition kann jederzeit auch mit der Tastenkombination STRG+F4 eingesehen werden.</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox10</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>#949ca4</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
                 <TablixRow>
                   <Height>6mm</Height>
                   <TablixCells>
@@ -84,7 +315,7 @@
                               <Color>#949ca4</Color>
                               <Style>Solid</Style>
                             </Border>
-                            <BackgroundColor>#7c8692</BackgroundColor>
+                            <BackgroundColor>LightSteelBlue</BackgroundColor>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
@@ -107,14 +338,39 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TabellenName.Value</Value>
+                                  <Value>Dataset: </Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>#4d4d4d</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>=Fields!Tabellenname.Value</Value>
+                                  <ActionInfo>
+                                    <Actions>
+                                      <Action>
+                                        <Hyperlink>="copy2clipboard:" &amp; Fields!XMLDefinition.Value</Hyperlink>
+                                      </Action>
+                                    </Actions>
+                                  </ActionInfo>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Blue</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value xml:space="preserve"> </Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <Color>#4d4d4d</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox7</rd:DefaultName>
@@ -150,13 +406,14 @@
                                   <ActionInfo>
                                     <Actions>
                                       <Action>
-                                        <Hyperlink>="copy2clipboard:"+Fields!XMLDefinition.Value</Hyperlink>
+                                        <Hyperlink>="copy2clipboard:" &amp; Fields!XMLDefinition.Value</Hyperlink>
                                       </Action>
                                     </Actions>
                                   </ActionInfo>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
-                                    <Color>#4d4d4d</Color>
+                                    <FontSize>8pt</FontSize>
+                                    <Color>Blue</Color>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -166,8 +423,7 @@
                           <rd:DefaultName>Name</rd:DefaultName>
                           <Style>
                             <Border>
-                              <Color>#e5e5e5</Color>
-                              <Style>Solid</Style>
+                              <Style>None</Style>
                             </Border>
                             <PaddingLeft>2pt</PaddingLeft>
                             <PaddingRight>2pt</PaddingRight>
@@ -192,6 +448,12 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
                   <Group Name="Details" />
                   <TablixMembers>
                     <TablixMember />
@@ -203,12 +465,32 @@
             <DataSetName>Berichtsdaten</DataSetName>
             <Top>6.87917mm</Top>
             <Left>8.99583mm</Left>
-            <Height>18mm</Height>
-            <Width>173.82811mm</Width>
+            <Height>65.18958mm</Height>
+            <Width>175.68019mm</Width>
             <Style>
               <Border>
-                <Style>None</Style>
+                <Style>Solid</Style>
               </Border>
+              <TopBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </TopBorder>
+              <BottomBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </BottomBorder>
+              <LeftBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Color>Black</Color>
+                <Style>Solid</Style>
+                <Width>1pt</Width>
+              </RightBorder>
             </Style>
           </Tablix>
         </ReportItems>
@@ -219,7 +501,7 @@
           </Border>
         </Style>
       </Body>
-      <Width>189.17707mm</Width>
+      <Width>192.74269mm</Width>
       <Page>
         <PageFooter>
           <Height>7.40833mm</Height>
