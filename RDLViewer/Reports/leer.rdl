@@ -19,24 +19,24 @@
 &lt;XmlData&gt;
 &lt;Root&gt;
 &lt;Daten&gt;
-  &lt;Name&gt;Tabelle1&lt;/Name&gt;
-  &lt;RDL&gt;Berichsdefinition der ersten Tabelle&lt;/RDL&gt;
+  &lt;TabellenName&gt;Tabelle1&lt;/TabellenName&gt;
+  &lt;XMLDefinition&gt;Berichsdefinition der ersten Tabelle&lt;/XMLDefinition&gt;
 &lt;/Daten&gt;
 &lt;Daten&gt;
-  &lt;Name&gt;Tabelle2&lt;/Name&gt;
-  &lt;RDL&gt;Berichsdefinition der zweiten Tabelle&lt;/RDL&gt;
+  &lt;TabellenName&gt;Tabelle2&lt;/TabellenName&gt;
+  &lt;XMLDefinition&gt;Berichsdefinition der zweiten Tabelle&lt;/XMLDefinition&gt;
 &lt;/Daten&gt;
 &lt;/Root&gt;
 &lt;/XmlData&gt;
 &lt;/Query&gt;</CommandText>
       </Query>
       <Fields>
-        <Field Name="Name">
-          <DataField>Name</DataField>
+        <Field Name="TabellenName">
+          <DataField>TabellenName</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="RDL">
-          <DataField>RDL</DataField>
+        <Field Name="XMLDefinition">
+          <DataField>XMLDefinition</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
@@ -107,7 +107,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Name.Value</Value>
+                                  <Value>=Fields!TabellenName.Value</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <Color>#4d4d4d</Color>
@@ -146,7 +146,14 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!RDL.Value</Value>
+                                  <Value>=Fields!XMLDefinition.Value</Value>
+                                  <ActionInfo>
+                                    <Actions>
+                                      <Action>
+                                        <Hyperlink>="copy2clipboard:"+Fields!XMLDefinition.Value</Hyperlink>
+                                      </Action>
+                                    </Actions>
+                                  </ActionInfo>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <Color>#4d4d4d</Color>

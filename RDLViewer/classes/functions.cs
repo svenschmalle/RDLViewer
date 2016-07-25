@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,5 +28,13 @@ namespace RDLViewer.classes
             return Path.Combine(GetAppPath(), Path.GetFileNameWithoutExtension(ReportDatei) +".json");
         }
 
+        internal static string getResourceFile(string Filename)
+        {
+            Assembly asm = Assembly.GetExecutingAssembly();
+            using (StreamReader textStreamReader = new StreamReader(asm.GetManifestResourceStream(Filename)))
+            {
+                return textStreamReader.ReadToEnd();
+            }
+        }
     }
 }

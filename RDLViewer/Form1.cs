@@ -98,8 +98,7 @@ namespace RDLViewer
 
                 ReportDataSource rdsleer = new ReportDataSource(Leerdt.TableName, Leerdt);
                 this.reportViewer1.LocalReport.DataSources.Add(rdsleer);
-
-                this.reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Reports", "leer" + ".rdl"); ;
+                this.reportViewer1.LocalReport.ReportEmbeddedResource = "RDLViewer.Reports.leer.rdl";
                 this.reportViewer1.LocalReport.EnableHyperlinks = true;
                 this.reportViewer1.RefreshReport();
             }
