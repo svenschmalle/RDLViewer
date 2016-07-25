@@ -79,10 +79,10 @@ namespace RDLViewer
                 Leerdt.Columns.Add("ReportPfad");
                 Leerdt.Columns.Add("ReportDatei");
                 string tmpfile = Path.Combine(classes.functions.GetAppPath(), "FBRDLViewer.tmp");
-                string output = "";
 
                 foreach (DataTable dt in _ReportDataSet.Tables)
                 {
+                    string output = "";
                     DataRow Leerdr = Leerdt.NewRow();
                     Leerdr["TabellenName"] = dt.TableName;
                     Leerdr["ReportPfad"] = Path.GetDirectoryName(RDLBericht);
