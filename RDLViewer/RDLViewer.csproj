@@ -113,6 +113,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <EmbeddedResource Include="Reports\leer.rdl" />
+    <EmbeddedResource Include="Reports\neu.rdl" />
     <None Include="Reports\test.rdl">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>

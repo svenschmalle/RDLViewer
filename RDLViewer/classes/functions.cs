@@ -5,14 +5,19 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RDLViewer.classes
 {
     internal static class functions
     {
-        internal static string GetAppPath()
+        public static string AppDataPath { get; set; }
+        public static string ReportPath { get; set; }
+
+        internal static void Init()
         {
-            return Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FBRDLViewer");
+            AppDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FBRDLViewer");
+            ReportPath = Path.Combine(Application.StartupPath,"Reports");
         }
 
         internal static void MakePath(string Pfad)
@@ -25,7 +30,7 @@ namespace RDLViewer.classes
 
         internal static string GetConfigDatei(string ReportDatei)
         {
-            return Path.Combine(GetAppPath(), Path.GetFileNameWithoutExtension(ReportDatei) +".json");
+            return Path.Combine(AppDataPath, Path.GetFileNameWithoutExtension(ReportDatei) +".json");
         }
 
         internal static string getResourceFile(string Filename)

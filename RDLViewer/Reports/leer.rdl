@@ -108,7 +108,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>41.18958mm</Height>
+                  <Height>46.73472mm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -132,7 +132,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Bitte erstelle einen Bericht mit dem SQL-Server Report Builder 3 (für SQL-Server 2014) und lege ihn in das Unterverzeichnis für die Berichte ab um diesen mit dem RDLViewer verwenden zu können.</Value>
+                                  <Value>Bitte erstellen Sie einen Bericht mit dem SQL-Server Report Builder 3 (für SQL-Server 2014) und lege ihn in das Unterverzeichnis für die Berichte ab um diesen mit dem RDLViewer verwenden zu können.</Value>
                                   <Style>
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -223,6 +223,56 @@
                                     <FontFamily>Tahoma</FontFamily>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value />
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Falls Sie es wünschen automatisiert einen leeren Bericht mit den übergebenen DataSets erstellen zu lassen, klicken Sie bitte </Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>HIER</Value>
+                                  <ActionInfo>
+                                    <Actions>
+                                      <Action>
+                                        <Hyperlink>="newreport:" &amp; First(Fields!ReportDatei.Value, "Berichtsdaten")</Hyperlink>
+                                      </Action>
+                                    </Actions>
+                                  </ActionInfo>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                    <Color>Blue</Color>
+                                  </Style>
+                                </TextRun>
+                                <TextRun>
+                                  <Value>.</Value>
+                                  <Style>
+                                    <FontFamily>Tahoma</FontFamily>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Normal</FontWeight>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -465,7 +515,7 @@ Die XML-Definition kann jederzeit auch mit der Tastenkombination STRG+F4 eingese
             <DataSetName>Berichtsdaten</DataSetName>
             <Top>6.87917mm</Top>
             <Left>8.99583mm</Left>
-            <Height>65.18958mm</Height>
+            <Height>70.73472mm</Height>
             <Width>175.68019mm</Width>
             <Style>
               <Border>
